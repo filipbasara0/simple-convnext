@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.vscode
+.simple-convnext
+
+trained_models
+training
+training_logs
