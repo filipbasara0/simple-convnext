@@ -127,8 +127,9 @@ class ConvNext(nn.Module):
         )
 
     def forward(self, x):
-        for idx, stage_layer in enumerate(self.stage_layers):
-            x = self.downsample_layers[idx](x)
+        all_layers = list(zip(self.downsample_layers, self.stage_layers))
+        for downsample_layer, stage_layer in all_layers:
+            x = downsample_layer(x)
             x = stage_layer(x)
         
         return self.cls(x.mean(dim=(-2, -1)))

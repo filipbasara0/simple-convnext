@@ -34,12 +34,12 @@ def main(args):
     }
 
     mixup = Mixup(**mixup_args)
-    rand_erasing = RandomErasing(probability=0.2, max_area=1/5)
+    rand_erasing = RandomErasing(probability=0.25, max_area=1/4, mode="pixel")
 
     # CIFAR10
     model = ConvNext(num_channels=3,
                      num_classes=args.num_classes,
-                     patch_size=1,
+                     patch_size=4,
                      layer_dims=[64, 128, 256, 512],
                      depths=[2, 2, 2, 2],
                      drop_rate=0.0)

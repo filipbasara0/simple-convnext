@@ -5,9 +5,8 @@ import matplotlib.pyplot as plt
 
 
 def plot_losses(train_losses, valid_losses, path):
-    plt.plot(train_losses)
-    # plt.savefig(f"{path}/train_loss.png")
-    plt.plot(valid_losses)
+    plt.plot(train_losses, label='train')
+    plt.plot(valid_losses, label='valid')
     plt.savefig(f"{path}/losses.png")
     plt.clf()
 
