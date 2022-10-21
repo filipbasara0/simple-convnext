@@ -2,7 +2,9 @@
 
 Simple implementation of the [ConvNext](https://arxiv.org/abs/2201.03545) architecture in PyTorch.
 
-![image](https://user-images.githubusercontent.com/29043871/196708595-074ad9dc-781b-4911-a5b9-b614e7ff9f19.png)
+<p align="center" width="100%">
+    <img width="50%" src="https://user-images.githubusercontent.com/29043871/197199637-9cd8b61b-632a-4cad-9361-b2db0af8c574.png"> 
+</p>
 
 Supports RandAug and Cutmix / Mixup augmentation and Label Smoothing, Random Erasing and Stochastic Depth regularization.
 
